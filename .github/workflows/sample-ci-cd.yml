@@ -1,0 +1,26 @@
+name: Sample Automation CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 2 * * *' # nightly run
+
+jobs:
+  run-smoke-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Run placeholder smoke test command
+        run: |
+          echo "This is a sample CI/CD template."
+          echo "Replace this with your Katalon/Playwright/Appium execution command."
