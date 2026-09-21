@@ -1,0 +1,13 @@
+{
+  "name": "web-playwright-demo",
+  "version": "1.0.0",
+  "description": "Runnable Playwright demo against a public automation practice site.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0"
+  }
+}

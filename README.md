@@ -23,10 +23,10 @@ A public reference architecture for scalable test automation across large mobile
 ```
 scalable-qa-automation/
 ├── docs/
-│   ├── architecture/
-│   │   ├── 01-hub-and-spoke-design.md
-│   │   ├── 02-agentic-ai-testing-playbook.md
-│   │   └── 03-mcp-integration.md
+│   └── architecture/
+│       ├── 01-hub-and-spoke-design.md
+│       ├── 02-agentic-ai-testing-playbook.md
+│       └── 03-mcp-integration.md
 ├── keywords/
 │   └── common/
 │       └── README.md
@@ -36,14 +36,26 @@ scalable-qa-automation/
 │   ├── demo-test-case.md
 │   └── dummy-page-objects/
 │       └── README.md
+├── demos/
+│   └── web-playwright/
+│       ├── tests/
+│       │   └── login.spec.js
+│       ├── playwright.config.js
+│       ├── package.json
+│       └── README.md
 └── .github/
     └── workflows/
-        └── sample-ci-cd.yml
+        ├── sample-ci-cd.yml
+        └── playwright-demo.yml
 ```
+
+## Live demos
+
+- **Web Playwright Demo** (`demos/web-playwright/`) — runnable end-to-end tests against the public [SauceDemo](https://www.saucedemo.com) site, with GitHub Actions CI.
 
 ## Tech stack
 
-Katalon Studio · Appium · Playwright · Selenium · API Testing · Jenkins · GitLab CI · Docker · Java · Groovy · Python · TypeScript · MCP
+Katalon Studio · Appium · Playwright · Selenium · API Testing · Jenkins · GitLab CI · Docker · GitHub Actions · Java · Groovy · Python · TypeScript · MCP
 
 ## License
 
