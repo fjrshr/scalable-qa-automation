@@ -22,17 +22,23 @@ A typical Spoke repo already has its own Keywords and Test Listeners. By symlink
 
 ## Distribution model
 
-```
-Hub (scalable-qa-automation)
-  │
-  ├── Git submodule ──► Spoke A (MyApp-Katalon)
-  │                     └── Keywords/Agentic Era/
-  │
-  ├── Git submodule ──► Spoke B (Web-AnotherApp-Katalon)
-  │                     └── Keywords/Agentic Era/
-  │
-  └── Git submodule ──► Spoke C (Portal-Katalon)
-                        └── Keywords/Agentic Era/
+```mermaid
+flowchart TD
+    Hub[Hub Repository<br/>scalable-qa-automation]
+    
+    SA[Spoke A: MyApp-Katalon]
+    SB[Spoke B: Web-AnotherApp-Katalon]
+    SC[Spoke C: Portal-Katalon]
+
+    Hub -- "Git submodule" --> SA
+    Hub -- "Git submodule" --> SB
+    Hub -- "Git submodule" --> SC
+    
+    SA -. "isolated namespace" .-> N1[Keywords/Agentic Era]
+    SB -. "isolated namespace" .-> N2[Keywords/Agentic Era]
+    SC -. "isolated namespace" .-> N3[Keywords/Agentic Era]
+    
+    style Hub fill:#0f7a6b,color:#fff,stroke:#000,stroke-width:2px
 ```
 
 ## Outcome
